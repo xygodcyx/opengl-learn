@@ -57,7 +57,7 @@ void FillOpenGlErrorMap() {
 }
 
 void Assert(bool exp) {
-  // assert(exp);
+  assert(exp);
 }
 
 void GLClearError() {

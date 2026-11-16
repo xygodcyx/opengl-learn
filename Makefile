@@ -10,6 +10,7 @@ JOBS := $(shell nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 4)
 
 config:
 	cmake --preset debug
+	ln -sfn $(BUILD_DIR_DEBUG)/compile_commands.json compile_commands.json
 
 debug:
 	cmake --preset debug

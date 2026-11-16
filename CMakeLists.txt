@@ -5,9 +5,12 @@ include(FetchContent)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)   # 生成 compile_commands.json
-# set(CMAKE_C_COMPILE_OBJECT ON)
+set(CMAKE_C_COMPILE_OBJECT ON)
 
-add_executable(${PROJECT_NAME} src/main.cpp src/Render.cpp)
+add_executable(${PROJECT_NAME} 
+  src/main.cpp
+  src/Render.cpp
+)
 
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
