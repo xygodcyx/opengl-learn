@@ -178,13 +178,14 @@ int main() {
 
     GLCall(glUniform4f(uColor, 0, g, 0.5, 1));
 
-    GLCall(glEnableVertexAttribArray(0));
+    // GLCall(glEnableVertexAttribArray(0));
 
     GLCall(glBindVertexArray(vao));
-    GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo));
-    GLCall(glBindBuffer(GL_ARRAY_BUFFER, buffer));
-    GLCall(
-        glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0));
+    // GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo));
+    // GLCall(glBindBuffer(GL_ARRAY_BUFFER, buffer));
+    // GLCall(
+    //     glVertexAttribPointwr(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2,
+    //     0));
 
     GLCall(glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(unsigned int),
                           GL_UNSIGNED_INT, NULL));
