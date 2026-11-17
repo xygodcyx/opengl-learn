@@ -7,10 +7,15 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)   # 生成 compile_commands.json
 set(CMAKE_C_COMPILE_OBJECT ON)
 
-add_executable(${PROJECT_NAME} 
+set(SOURCE_FILES 
   src/main.cpp
   src/Render.cpp
+  src/Shader.cpp
+  src/VertexBuffer.cpp
+  src/IndexBuffer.cpp
 )
+
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
